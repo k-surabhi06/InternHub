@@ -26,7 +26,9 @@ import psycopg2
 from psycopg2.extras import execute_values
 
 # ─── Config ────────────────────────────────────────────────────────────────────
-load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), "../../backend/.env"))
+load_dotenv(
+    dotenv_path=os.path.join(os.path.dirname(__file__), "../../.env")
+)
 
 logging.basicConfig(
     level=logging.INFO,

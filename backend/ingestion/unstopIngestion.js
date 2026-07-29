@@ -7,9 +7,9 @@
  * (No auth key required for the public search endpoint)
  */
 
-require('dotenv').config({ path: `${__dirname}/../backend/.env` });
+require('dotenv').config({ path: `${__dirname}/../.env` });
 // Use the backend's already-generated Prisma client
-const { PrismaClient } = require('../backend/node_modules/@prisma/client');
+const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
 const UNSTOP_API_URL = 'https://unstop.com/api/public/opportunity/search-result';

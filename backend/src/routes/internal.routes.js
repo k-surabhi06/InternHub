@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const { refreshInternships } = require("../../../ingestion/refreshService");
+const { refreshInternships } = require("../../ingestion/refreshService");
 
 router.post("/refresh", async (req, res) => {
   try {
