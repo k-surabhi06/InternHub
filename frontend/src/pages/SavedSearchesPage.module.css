@@ -1,0 +1,73 @@
+.topRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.empty {
+  padding: 3rem 0;
+  text-align: center;
+  color: var(--color-muted);
+  line-height: 2;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.itemTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: 1.4;
+}
+
+.deleteBtn {
+  background: none;
+  border: none;
+  color: var(--color-muted);
+  font-size: 0.78rem;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.deleteBtn:hover { color: var(--color-danger); background: #fee2e244; }
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.itemFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.date {
+  font-size: 0.78rem;
+  color: var(--color-muted);
+}

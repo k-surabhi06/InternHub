@@ -1,0 +1,53 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: transform 0.12s, box-shadow 0.12s;
+}
+.card:hover {
+  transform: translateY(-2px);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: 1.4;
+}
+
+.company {
+  font-size: 0.875rem;
+  color: var(--color-muted);
+  font-weight: 500;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  margin-top: 0.1rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: auto;
+  padding-top: 0.5rem;
+}
+
+/* ─── Work mode badges ───────────────────────────────────────────────────────── */
+.workModeRemote  { background: #d1fae5; color: #065f46; }
+.workModeOnSite  { background: #e0e7ff; color: #3730a3; }
+.workModeHybrid  { background: #fef3c7; color: #92400e; }
+
+[data-theme="dark"] .workModeRemote  { background: #0d2b1a; color: #6ee7b7; }
+[data-theme="dark"] .workModeOnSite  { background: #1e1b4b; color: #a5b4fc; }
+[data-theme="dark"] .workModeHybrid  { background: #2d1f0a; color: #fcd34d; }

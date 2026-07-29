@@ -1,0 +1,107 @@
+.navbar {
+  background: var(--navbar-bg);
+  border-bottom: 1px solid var(--navbar-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.brand {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  text-decoration: none;
+  margin-right: auto;
+  letter-spacing: -0.02em;
+}
+.brand:hover { text-decoration: none; }
+
+.rightGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-left: auto;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.link {
+  color: var(--color-muted);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.35rem 0.65rem;
+  border-radius: var(--radius-sm);
+  transition: background 0.15s, color 0.15s;
+}
+.link:hover { color: var(--color-text); background: var(--color-surface); text-decoration: none; }
+.activeLink { color: var(--color-accent) !important; font-weight: 600; }
+
+.themeToggle {
+  background: none;
+  border: 1px solid var(--color-border);
+  color: var(--color-muted);
+  font-size: 1rem;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.15s, color 0.15s;
+}
+.themeToggle:hover { background: var(--color-surface); color: var(--color-text); }
+
+.menuToggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--color-border);
+  font-size: 1rem;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border-radius: var(--radius-sm);
+  color: var(--color-muted);
+  flex-shrink: 0;
+}
+
+.logoutBtn {
+  font-size: 0.85rem;
+}
+
+@media (max-width: 680px) {
+  .menuToggle { display: flex; align-items: center; justify-content: center; }
+  .rightGroup { order: 2; }
+  .brand { order: 1; }
+  .inner { flex-wrap: wrap; height: auto; padding: 0.6rem 1rem; }
+  .links {
+    display: none;
+    order: 3;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.75rem 0;
+    gap: 0.25rem;
+    border-top: 1px solid var(--color-border);
+    margin-top: 0.5rem;
+  }
+  .links.open { display: flex; }
+  .link { width: 100%; padding: 0.5rem 0.65rem; }
+}

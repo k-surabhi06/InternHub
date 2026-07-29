@@ -1,0 +1,119 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+enum InternshipStatus {
+  Saved
+  Applied
+  Interview
+  Offer
+  Rejected
+}
+
+enum InternshipSource {
+  Internshala
+  Unstop
+}
+
+enum WorkMode {
+  Remote
+  OnSite
+  Hybrid
+}
+
+model User {
+  id                String            @id @default(uuid())
+  name              String
+  email             String            @unique
+  passwordHash      String
+  createdAt         DateTime          @default(now())
+  // Profile fields
+  resumeUrl         String?
+  preferredRole     String?
+  preferredLocation String?
+  preferredStipend  String?
+  savedItems        SavedInternship[]
+  savedSearches     SavedSearch[]
+  resumes           Resume[]
+}
+
+model Internship {
+  id             String           @id @default(uuid())
+  title          String
+  company        String
+  location       String?
+  stipend        String?
+  duration       String?
+  description    String?
+  postedDate     DateTime?
+  applyUrl       String           @unique
+  source         InternshipSource
+  sourceId       String?
+  workMode       WorkMode?
+  sourceWorkMode String?
+  deadline       DateTime?
+  isActive       Boolean          @default(true)
+  scrapedAt      DateTime         @default(now())
+  savedBy        SavedInternship[]
+
+  @@unique([sourceId, source])
+}
+
+model Resume {
+  id               String            @id @default(uuid())
+  userId           String
+  label            String
+  fileUrl          String
+  fileName         String
+  cloudinaryId     String?
+  uploadedAt       DateTime          @default(now())
+
+  user             User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  savedInternships SavedInternship[]
+}
+
+model SavedInternship {
+  id           String           @id @default(uuid())
+  userId       String
+  internshipId String
+  resumeId     String?
+  status       InternshipStatus @default(Saved)
+  notes        String?
+  savedAt      DateTime         @default(now())
+  updatedAt    DateTime         @updatedAt
+
+  user         User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  internship   Internship  @relation(fields: [internshipId], references: [id], onDelete: Cascade)
+  resume       Resume?     @relation(fields: [resumeId], references: [id], onDelete: SetNull)
+  history      StatusHistory[]
+
+  @@unique([userId, internshipId])
+}
+
+model StatusHistory {
+  id                String           @id @default(uuid())
+  savedInternshipId String
+  status            InternshipStatus
+  changedAt         DateTime         @default(now())
+  note              String?
+
+  savedInternship   SavedInternship  @relation(fields: [savedInternshipId], references: [id], onDelete: Cascade)
+}
+
+model SavedSearch {
+  id        String   @id @default(uuid())
+  userId    String
+  label     String
+  search    String?
+  location  String?
+  source    String?
+  createdAt DateTime @default(now())
+
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}

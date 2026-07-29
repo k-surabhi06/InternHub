@@ -1,0 +1,156 @@
+.remoteCheckbox {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.875rem;
+  color: var(--color-text);
+  cursor: pointer;
+  white-space: nowrap;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg);
+  transition: background 0.15s, border-color 0.15s;
+}
+.remoteCheckbox:hover {
+  background: var(--color-surface);
+  border-color: var(--color-accent);
+}
+.remoteCheckbox input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  accent-color: var(--color-accent);
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+}
+.remoteCheckbox input[type="checkbox"]:focus {
+  box-shadow: none;
+  border-color: transparent;
+}
+
+.topRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.syncBadge {
+  font-size: 0.78rem;
+  color: var(--color-success);
+  background: var(--color-success-light);
+  border: 1px solid var(--color-success);
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  opacity: 0.85;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ─── Quick search keyword chips ─────────────────────────────────────────────── */
+.quickSearchRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.quickChip {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-muted);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+.quickChip:hover {
+  background: var(--color-accent-light);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.quickChipActive {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #ffffff;
+}
+.quickChipActive:hover {
+  background: var(--color-accent-dark);
+  border-color: var(--color-accent-dark);
+  color: #ffffff;
+}
+
+.searchInput {
+  flex: 2 1 260px;
+  min-width: 180px;
+}
+
+.filterInput {
+  flex: 1 1 150px;
+  min-width: 130px;
+}
+
+.actionsRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  min-height: 28px;
+}
+
+.resultCount {
+  font-size: 0.82rem;
+  color: var(--color-muted);
+}
+
+.loadingText {
+  color: var(--color-muted);
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.emptyState {
+  padding: 3rem 0;
+  text-align: center;
+  color: var(--color-muted);
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.pageInfo {
+  font-size: 0.875rem;
+  color: var(--color-muted);
+}

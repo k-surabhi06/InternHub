@@ -1,0 +1,39 @@
+# Environment variables
+.env
+.env.local
+.env.production
+.env.*.local
+
+# Dependencies
+node_modules/
+
+# Build outputs
+/build
+/dist
+frontend/build
+
+# Prisma generated binaries
+*.dll.node
+*.node
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Uploads
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editor
+.vscode/
+.idea/

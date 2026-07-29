@@ -1,0 +1,165 @@
+.page {
+  max-width: 680px;
+}
+
+.topRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ─── Upload form ─────────────────────────────────────────────────────────────── */
+.uploadCard {
+  margin-bottom: 1.5rem;
+}
+
+.uploadTitle {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.9rem;
+}
+
+.uploadForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.formRow {
+  display: flex;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.labelInput {
+  flex: 1 1 200px;
+}
+
+.fileLabel {
+  flex: 1 1 200px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 0.48rem 0.75rem;
+  font-size: 0.875rem;
+  color: var(--color-muted);
+  cursor: pointer;
+  background: var(--color-surface);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: border-color 0.15s;
+  min-width: 0;
+}
+.fileLabel:hover { border-color: var(--color-accent); color: var(--color-text); }
+
+.fileInput { display: none; }
+
+.hint {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+}
+
+.errorMsg {
+  font-size: 0.82rem;
+  color: var(--color-danger);
+}
+
+.successMsg {
+  font-size: 0.82rem;
+  color: var(--color-success);
+}
+
+/* ─── Resume list ──────────────────────────────────────────────────────────────── */
+.listTitle {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--color-text);
+}
+
+.empty {
+  padding: 2rem 0;
+  text-align: center;
+  color: var(--color-muted);
+  font-size: 0.875rem;
+}
+
+.resumeList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.resumeItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.65rem 0.9rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.resumeLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-width: 0;
+}
+
+.resumeIcon { font-size: 1.15rem; flex-shrink: 0; }
+
+.resumeInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  min-width: 0;
+}
+
+.resumeLabel {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.resumeFile {
+  font-size: 0.75rem;
+  color: var(--color-accent);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.resumeDate {
+  font-size: 0.72rem;
+  color: var(--color-muted);
+}
+
+.resumeRight {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.deleteBtn {
+  background: none;
+  border: none;
+  color: var(--color-muted);
+  font-size: 0.78rem;
+  padding: 0.2rem 0.45rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.deleteBtn:hover { color: var(--color-danger); background: #fee2e244; }

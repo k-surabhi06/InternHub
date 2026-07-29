@@ -1,0 +1,307 @@
+.header {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* ─── Analytics ──────────────────────────────────────────────────────────────── */
+.analytics {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.analyticsTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.65rem;
+}
+
+.analyticsTitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.analyticsTotal {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+  color: var(--color-muted);
+}
+
+.legendDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ─── Tabs ───────────────────────────────────────────────────────────────────── */
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.75rem;
+}
+
+.tab {
+  background: none;
+  border: 1px solid transparent;
+  color: var(--color-muted);
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.tab:hover { background: var(--color-surface); color: var(--color-text); }
+.activeTab {
+  background: var(--color-surface);
+  border-color: var(--color-border);
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.tabCount {
+  background: var(--color-surface-2);
+  color: var(--color-muted);
+  font-size: 0.72rem;
+  padding: 0.05rem 0.4rem;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.loadingText {
+  color: var(--color-muted);
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.empty {
+  padding: 3rem 0;
+  text-align: center;
+  color: var(--color-muted);
+  line-height: 2;
+}
+
+/* ─── Kanban ─────────────────────────────────────────────────────────────────── */
+.kanban {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
+  gap: 1rem;
+  align-items: start;
+  padding-bottom: 2rem;
+}
+
+.column {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 0.75rem;
+}
+
+.columnTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  font-size: 0.875rem;
+}
+
+.count {
+  font-size: 0.78rem;
+  color: var(--color-muted);
+  font-weight: 400;
+}
+
+.columnItems {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  min-height: 40px;
+}
+
+.columnEmpty {
+  color: var(--color-muted);
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+/* ─── Flat list ──────────────────────────────────────────────────────────────── */
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  padding-bottom: 2rem;
+}
+
+/* ─── Tracker Card ───────────────────────────────────────────────────────────── */
+.trackerCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.deleteBtn {
+  background: none;
+  border: none;
+  color: var(--color-muted);
+  font-size: 0.78rem;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.deleteBtn:hover { color: var(--color-danger); background: #fee2e244; }
+
+.cardTitle {
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.cardCompany {
+  font-size: 0.82rem;
+  color: var(--color-muted);
+}
+
+.cardMeta {
+  font-size: 0.78rem;
+  color: var(--color-muted);
+}
+
+.statusSelect {
+  margin-top: 0.25rem;
+  width: 100%;
+  font-size: 0.82rem;
+  padding: 0.35rem 0.5rem;
+}
+
+.notes {
+  width: 100%;
+  font-size: 0.8rem;
+  padding: 0.4rem 0.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  resize: vertical;
+  color: var(--color-muted);
+  background: var(--color-bg);
+}
+.notes:focus { border-color: var(--color-accent); outline: none; }
+
+/* ─── Card footer ────────────────────────────────────────────────────────────── */
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin-top: 0.2rem;
+}
+
+.applyLink {
+  font-size: 0.78rem;
+  color: var(--color-accent);
+}
+
+/* ─── Status history ─────────────────────────────────────────────────────────── */
+.history {
+  border-top: 1px solid var(--color-border);
+  padding-top: 0.5rem;
+  margin-top: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.historyItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.historyDate {
+  font-size: 0.72rem;
+  color: var(--color-muted);
+}
+
+/* ─── Deadline warning banner ────────────────────────────────────────────────── */
+.deadlineWarn {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.3rem 0.6rem;
+  border-radius: var(--radius-sm);
+  border-left: 3px solid;
+}
+
+/* 3 days left — amber */
+.deadlineWarn_warning {
+  background: var(--color-warning-light);
+  color: var(--color-warning);
+  border-color: var(--color-warning);
+}
+
+/* 1–2 days left — deep orange/red */
+.deadlineWarn_urgent {
+  background: #fee2e2;
+  color: #b91c1c;
+  border-color: #dc2626;
+}
+
+/* today */
+.deadlineWarn_today {
+  background: #dc2626;
+  color: #ffffff;
+  border-color: #991b1b;
+}
+
+/* already passed */
+.deadlineWarn_expired {
+  background: var(--color-surface-2);
+  color: var(--color-muted);
+  border-color: var(--color-border);
+  text-decoration: line-through;
+}
+
+[data-theme="dark"] .deadlineWarn_urgent {
+  background: #3b0d0d;
+  color: #fca5a5;
+  border-color: #f85149;
+}
+[data-theme="dark"] .deadlineWarn_today {
+  background: #b91c1c;
+  color: #ffffff;
+  border-color: #991b1b;
+}
