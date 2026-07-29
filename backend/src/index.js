@@ -10,6 +10,7 @@ const trackerRoutes = require('./routes/tracker.routes');
 const profileRoutes = require('./routes/profile.routes');
 const savedSearchRoutes = require('./routes/savedSearch.routes');
 const resumeRoutes = require('./routes/resume.routes');
+const internalRoutes = require('./routes/internal.routes');
 
 const app = express();
 
@@ -46,6 +47,7 @@ app.use('/api/tracker', trackerRoutes);
 app.use('/api/profile', profileRoutes);
 app.use('/api/saved-searches', savedSearchRoutes);
 app.use('/api/resumes', resumeRoutes);
+app.use('/internal', internalRoutes);
 
 // ─── 404 fallthrough ──────────────────────────────────────────────────────────
 app.use((_req, res) => res.status(404).json({ error: 'Route not found.' }));
