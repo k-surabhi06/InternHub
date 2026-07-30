@@ -15,9 +15,10 @@ const internalRoutes = require('./routes/internal.routes');
 const app = express();
 
 // ─── Global Middleware ─────────────────────────────────────────────────────────
-// Allow both local dev (localhost:3000) and the production Vercel URL simultaneously
+// Allow local dev, the deployed Vercel frontend, and an optional CORS_ORIGIN env var.
 const allowedOrigins = [
   'http://localhost:3000',
+  'https://internhub-frontend-surabhi-ks-projects-83bea278.vercel.app',
   process.env.CORS_ORIGIN,
 ].filter(Boolean); // remove undefined if CORS_ORIGIN not set
 
