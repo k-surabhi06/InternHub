@@ -33,7 +33,7 @@ services:
   - type: worker
     name: internhub-scheduler
     runtime: node
-    rootDir: ingestion
+    rootDir: backend/ingestion
     buildCommand: npm install && pip install -r requirements.txt
     startCommand: node scheduler.js
     envVars:
