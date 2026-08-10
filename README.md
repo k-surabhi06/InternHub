@@ -22,4 +22,3 @@ See `backend/README.md`, `frontend/README.md`, and `ingestion/README.md` for ind
 - **Database**: PostgreSQL (Neon in production)
 - **Auth**: JWT + bcrypt.js
 - **Ingestion**: Python + BeautifulSoup4 (Internshala), Node.js (Unstop)
-- **Deployment**: Vercel (frontend), Render/Railway (backend), Neon (Postgres)
